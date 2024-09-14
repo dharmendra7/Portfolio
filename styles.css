@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: #333333;
+    --secondary-color: #555555;
+    --accent-color: #6761de;
+    --background-color: #FFFFFF;
+    --font-family-headings: 'Montserrat', sans-serif;
+    --font-family-body: 'Open Sans', sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-family-body);
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* Navigation */
+nav {
+    background-color: var(--background-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eaeaea;
+}
+
+nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-family: var(--font-family-headings);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 30px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: var(--accent-color);
+}
+
+nav .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+nav .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Home Section */
+#home {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-family: var(--font-family-headings);
+    font-size: 3rem;
+}
+
+#home h1 span {
+    color: var(--accent-color);
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin: 20px 0;
+}
+
+#home .btn {
+    text-decoration: none;
+    padding: 12px 30px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#home .btn:hover {
+    background-color: #5848c2;
+    transform: translateY(-3px);
+}
+
+/* About Section */
+#about h2 {
+    font-family: var(--font-family-headings);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#about .about-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+#about .profile-pic {
+    flex: 1 1 300px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+#about .profile-pic img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--accent-color);
+}
+
+#about .about-text {
+    flex: 2 1 500px;
+}
+
+#about .about-text p {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+/* Experience Section */
+#experience h2 {
+    font-family: var(--font-family-headings);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#experience .timeline {
+    margin-top: 40px;
+}
+
+#experience .timeline-item {
+    margin-bottom: 40px;
+}
+
+#experience .timeline-item h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-family: var(--font-family-headings);
+}
+
+#experience .timeline-item span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+#experience .timeline-item p {
+    color: var(--secondary-color);
+}
+
+/* Projects Section */
+#projects h2 {
+    font-family: var(--font-family-headings);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.project-item {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-item h3 {
+    margin: 20px 0 10px 0;
+    color: var(--accent-color);
+    font-family: var(--font-family-headings);
+}
+
+.project-item p {
+    color: var(--secondary-color);
+}
+
+.project-item .btn {
+    margin-top: 15px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-item .btn:hover {
+    background-color: #5848c2;
+    transform: translateY(-3px);
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Skills Section */
+#skills h2 {
+    font-family: var(--font-family-headings);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#skills .skills-content {
+    margin-top: 40px;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.skill-bar {
+    background-color: #eaeaea;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 10px;
+    background-color: var(--accent-color);
+    width: 0;
+    transition: width 1s ease;
+}
+
+/* Container and Text Styling */
+#social-icons {
+    color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+}
+
+#social-icons h2 {
+    margin-bottom: 40px;    
+    font-family: var(--font-family-headings);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#social-icons p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Icon List Styling */
+.icon-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adjust spacing between icons */
+}
+
+.icon-list a {
+    color: #000000; /* Set the icon color */
+    font-size: 24px; /* Adjust the size of the icons */
+    transition: transform 0.3s;
+}
+
+.icon-list a:hover {
+    transform: scale(1.1); /* Enlarge the icon on hover */
+    color: var(--accent-color); /* Optional: change color on hover */
+}
+
+
+/* Contact Section */
+/* #contact h2 {
+    font-family: var(--font-family-headings);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+#contact p {
+    color: var(--secondary-color);
+    margin-top: 20px;
+    text-align: center;
+}
+
+#contact .contact-info {
+    list-style: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#contact .contact-info li {
+    margin: 10px 0;
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+#contact .contact-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+#contact .contact-info a:hover {
+    text-decoration: underline;
+} */
+
+/* Footer */
+footer {
+    background-color: #fafafa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    color: var(--secondary-color);
+}
+
+/* Subtle Animations */
+.btn, .nav-links a {
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--background-color);
+        width: 200px;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .nav-links li {
+        margin: 20px 0;
+    }
+
+    nav .hamburger {
+        display: flex;
+    }
+
+    nav.active .nav-links {
+        display: flex;
+    }
+
+    #about .about-content {
+        flex-direction: column;
+    }
+
+    #about .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.logo span {
+    color: var(--accent-color);
+    /* margin-top: 20px;
+    text-align: center; */
+}
+
+/* Buttons */
+.btn {
+    /* Existing styles */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5848c2;
+    transform: translateY(-5px);
+}
+
+/* Links */
+.nav-links a {
+    /* Existing styles */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Project Items */
+.project-item {
+    /* Existing styles */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Skill Bars */
+.skill-level {
+    /* Existing styles */
+    width: 0;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Animate Skill Bars on class addition */
+.skill-level.animate {
+    width: var(--skill-level);
+}
+
+/* Additional Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
